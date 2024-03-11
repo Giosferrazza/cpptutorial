@@ -10,11 +10,16 @@ int multiply(int x, int y); // Need prototypes function declaration if you don't
 //The parenthesis represent input to a function a.k.a parameters which is give arguments
 int main() //main function int is short for integer/related to return 0 called automatically
 {
-    int slices;
-    cout << "YO bro how many slices of pizza did you eat?" << endl;
-    cin >> slices;
-    cout << "You have " << slices << " slices of pizza" << endl;
-    cout << pow(10,2)*2 << endl; //argument is data passed into a function
+    int base, exponent;
+    cout << "What is the base?" << endl;
+    cin >> base;
+    cout << "What is the exponent?";
+    cin >> exponent;
+
+    double power = pow(base, exponent);
+
+
+    cout << "Your exponent is " << power << endl; //argument is data passed into a function
     cout << multiply(5,6) << endl; //Function call
 }
 
