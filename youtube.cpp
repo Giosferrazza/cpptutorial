@@ -5,31 +5,25 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-int multiply(int x, int y); // Need prototypes function declaration if you don't define the function before using the function
+double power(double, int); // Need prototypes function declaration// Only use data types no var 
 
 //The parenthesis represent input to a function a.k.a parameters which is give arguments
 int main() //main function int is short for integer/related to return 0 called automatically
 {
-    int base, exponent;
-    cout << "What is the base?" << endl;
-    cin >> base;
-    cout << "What is the exponent?";
-    cin >> exponent;
-
-    double power = pow(base, exponent);
-
-
-    cout << "Your exponent is " << power << endl; //argument is data passed into a function
-    cout << multiply(5,6) << endl; //Function call
+    cout << power(1,0) << endl;
 }
 
-
-//Function defintion
-int multiply(int x, int y)
+double power(double base, int exponent)
 {
-    return x * y;
+    double result = 1;
+    for(int i = 0; i < exponent; i++) // dont forget to increment the index
+    {
+        result = result * base;       
+    }
+    return result;
 }
 
+//arguments get passed in but the parameters are in the defintion!!
 
 //arrows point in the way of the data flow
 // (<<) is an operator and means that you will operate on the following operand
